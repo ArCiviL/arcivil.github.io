@@ -7,42 +7,40 @@
   <style>
     html,body{height:100%;margin:0}
     body{
-      position:relative;
-      min-height:100vh;
-      display:flex;align-items:center;justify-content:center;
-      color:#e8eaed;font-family:system-ui,Arial,sans-serif;
-      background:#0f1115;
+      position:relative; min-height:100vh;
+      display:flex; align-items:center; justify-content:center;
+      color:#e8eaed; font-family:system-ui,Arial,sans-serif;
+      background:#0f1115; overflow:hidden;
     }
-    /* Arka plan görseli */
-    body::before{
-      content:"";
-      position:fixed; inset:0;
-      background: url('asmizo_background_1.png') center/cover no-repeat;
-      z-index:-2;
+    /* Arka plan görseli (blur yok) */
+    .bg{
+      position:fixed; inset:0; z-index:-2;
+      width:100%; height:100%;
+      object-fit:cover; object-position:center;
     }
-    /* Hafif karartma (yazıların okunması için) */
-    body::after{
-      content:"";
-      position:fixed; inset:0;
-      background: rgba(0,0,0,.45);
-      z-index:-1;
-    }
+    /* Kontrast için hafif karartma */
+    .shade{ position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:-1; }
 
     .card{
-      max-width:640px;text-align:center;
-      padding:32px 28px;border:1px solid #2a2f3a;border-radius:16px;
+      max-width:640px; text-align:center;
+      padding:32px 28px; border:1px solid #2a2f3a; border-radius:16px;
       background:rgba(255,255,255,.02);
-      backdrop-filter:blur(6px); /* sadece kart içinde cam efekti */
+      backdrop-filter:blur(6px); /* isterse kaldırılabilir */
     }
-    h1{margin:0 0 12px;font-size:28px;letter-spacing:.2px}
-    p{margin:6px 0 0;line-height:1.6;color:#c9ccd3}
-    .pill{display:inline-block;margin:14px auto 20px;padding:6px 10px;border:1px solid #394050;border-radius:999px;font-size:12px;color:#aab0bb}
-    a{color:#8ab4ff;text-decoration:none}
+    h1{margin:0 0 12px; font-size:28px; letter-spacing:.2px}
+    p{margin:6px 0 0; line-height:1.6; color:#c9ccd3}
+    .pill{display:inline-block; margin:14px auto 20px; padding:6px 10px;
+          border:1px solid #394050; border-radius:999px; font-size:12px; color:#aab0bb}
+    a{color:#8ab4ff; text-decoration:none}
     a:hover{text-decoration:underline}
-    .logo{display:block;margin:0 auto 20px;max-width:220px}
+    .logo{display:block; margin:0 auto 20px; max-width:220px}
   </style>
 </head>
 <body>
+  <!-- Arka plan -->
+  <img src="asmizo_bg.jpg?v=1" alt="" class="bg">
+  <div class="shade"></div>
+
   <div class="card">
     <img src="asmizo_tam_logo_beyaz.png" alt="Asmizo Logo" class="logo">
     <div class="pill">Yapım Aşamasında</div>
