@@ -39,9 +39,37 @@
       bottom:10px;
       width:100%;
       text-align:center;   /* ortalanmış */
-      font-size:13px;
+      font-size:12px;
       color:#aab0bb;
     }
+    h2{
+        margin-top:20px;
+        font-size:20px;
+        color:#ffffff;
+        letter-spacing:.3px;
+      }
+      
+      .contact{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:30px;
+        margin-top:15px;
+      }
+      
+      .contact-item{
+        text-align:center;
+      }
+      
+      .contact-item .icon{
+        font-size:20px;
+        margin-bottom:4px;
+      }
+      
+      .divider{
+        color:#aab0bb;
+        font-size:18px;
+      }
 
   </style>
 </head>
@@ -56,9 +84,20 @@
     <h1>Asmizo Mühendislik A.Ş.</h1>
     <p>Kurumsal web sitemizi çok yakında yayına alıyoruz.</p>
     <p>
-      İletişim: <a href="mailto:nurullaheren@asmizo.com.tr">nurullaheren@asmizo.com.tr</a><br>
-      Telefon: <a href="tel:+905462878868">0546 287 88 68</a>
+      <h2>Bizimle İletişime Geçin</h2>
+        <div class="contact">
+          <div class="contact-item">
+            <div class="icon">✉️</div>
+            <a href="mailto:nurullaheren@asmizo.com.tr">nurullaheren@asmizo.com.tr</a>
+          </div>
+          <div class="divider">|</div>
+          <div class="contact-item">
+            <div class="icon">📞</div>
+            <a href="tel:+905462878868">0546 287 88 68</a>
+          </div>
+        </div>
     </p>
+
   </div>
   <footer>
     © 2025 Asmizo Mühendislik A.Ş. - Tüm Hakları Saklıdır.
