@@ -57,15 +57,21 @@
     }
 
     .contact-item{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      font-size:16px;
-    }
-
-    .contact-item .icon{
-      font-size:20px;
-    }
+        display:flex;
+        align-items:center;
+        gap:8px;
+        font-size:16px;
+      }
+      
+      .contact-item .icon{
+        font-size:20px;
+      }
+      
+      /* LinkedIn linkine özel renk */
+      .contact-item a[href*="linkedin"]{
+        color:#0a66c2;
+        font-weight:600;
+      }
   </style>
 </head>
 <body>
@@ -79,7 +85,7 @@
     <h1>Asmizo Mühendislik A.Ş.</h1>
     <p>Kurumsal web sitemizi çok yakında yayına alıyoruz.</p>
 
-    <h2>Bizimle İletişime Geçin!</h2>
+        <h2>Bizimle İletişime Geçin</h2>
     <div class="contact-vertical">
       <div class="contact-item">
         <div class="icon">✉️</div>
@@ -89,7 +95,12 @@
         <div class="icon">📞</div>
         <a href="tel:+905462878868">0546 287 88 68</a>
       </div>
+      <div class="contact-item">
+        <div class="icon">🔗</div>
+        <a href="https://www.linkedin.com/company/asmizo/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
+
   </div>
 
   <footer>
